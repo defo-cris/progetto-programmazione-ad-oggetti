@@ -1,0 +1,28 @@
+@startuml
+
+title __CSVCLASSES's Class Diagram__\n
+
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        class com.example.progetto.csvClasses.DataCsv {
+            {static} + colNames : String[]
+            {static} + dataNames : String[]
+            {static} + dataType : String[]
+            - csvData : Vector<DataCsvRow>
+            - firstLine : String[]
+            - metadata : Vector<Metadata>
+            - url : String
+            + DataCsv()
+            + readAndStore()
+            + setServicesData()
+            - createMetadata()
+        }
+      }
+    }
+
+  
+
+
+
+@enduml

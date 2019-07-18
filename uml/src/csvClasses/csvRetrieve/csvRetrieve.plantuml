@@ -1,0 +1,118 @@
+@startuml
+
+title __CSVRETRIEVE's Class Diagram__\n
+
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace csvRetrieve {
+          class com.example.progetto.csvClasses.csvRetrieve.CsvSplitter {
+              - commonSeparator : ArrayList<String>
+              - firstLine : String
+              - sep : String
+              + CsvSplitter()
+              + setDelimiter()
+              + splitFirstLine()
+              + splitLine()
+              ~ addCommonSeparator()
+              ~ guessDelimiter()
+          }
+        }
+      }
+    }
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace csvRetrieve {
+          class com.example.progetto.csvClasses.csvRetrieve.CsvValidator {
+              {static} + validateCountryArraySemicolonSeparated()
+              {static} + validateCurrency()
+              {static} + validateFloatArraySemicolonSeparated()
+              {static} + validateID()
+              {static} + validateString()
+              {static} + validateStringArrayCommaSeparated()
+              {static} + validateStringArraySemicolonSeparated()
+              {static} + validateUrl()
+              {static} + validateUrlArraySemicolonSeparated()
+              {static} - validateCountyAbbreviations()
+              {static} - validateFloat()
+              {static} - validateInt()
+              {static} - validateStringArray()
+          }
+        }
+      }
+    }
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace csvRetrieve {
+          class com.example.progetto.csvClasses.csvRetrieve.GetCsvDataFromUrl {
+              - url : String
+              + GetCsvDataFromUrl()
+              + getFirstLine()
+              ~ getLine()
+              ~ resetPosition()
+          }
+        }
+      }
+    }
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace csvRetrieve {
+          class com.example.progetto.csvClasses.csvRetrieve.GetCsvUrlFromJsonUrl {
+              + getLink()
+          }
+        }
+      }
+    }
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace csvRetrieve {
+          class com.example.progetto.csvClasses.csvRetrieve.GetCsvUrlFromJsonUrl.GetCsvLinkFromJson {
+              ~ getLink()
+          }
+        }
+      }
+    }
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace csvRetrieve {
+          class com.example.progetto.csvClasses.csvRetrieve.GetCsvUrlFromJsonUrl.GetJsonFromUrl {
+              ~ readJsonFromUrl()
+              - readAll()
+          }
+        }
+      }
+    }
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace csvRetrieve {
+          class com.example.progetto.csvClasses.csvRetrieve.ReadLineFromBufferedReader {
+              - br : BufferedReader
+              - buffer : CircularFifoBuffer
+              - endOfLineDelimiter : String
+              - maxLineLength : int
+              + ReadLineFromBufferedReader()
+              + ReadLineFromBufferedReader()
+              ~ mark()
+              ~ readLine()
+              ~ reset()
+          }
+        }
+      }
+    }
+
+  
+
+  com.example.progetto.csvClasses.csvRetrieve.CsvSplitter o-- com.example.progetto.csvClasses.csvRetrieve.GetCsvDataFromUrl : csv
+  com.example.progetto.csvClasses.csvRetrieve.GetCsvDataFromUrl o-- com.example.progetto.csvClasses.csvRetrieve.ReadLineFromBufferedReader : br
+  com.example.progetto.csvClasses.csvRetrieve.GetCsvUrlFromJsonUrl +-down- com.example.progetto.csvClasses.csvRetrieve.GetCsvUrlFromJsonUrl.GetCsvLinkFromJson
+  com.example.progetto.csvClasses.csvRetrieve.GetCsvUrlFromJsonUrl +-down- com.example.progetto.csvClasses.csvRetrieve.GetCsvUrlFromJsonUrl.GetJsonFromUrl
+
+
+
+@enduml

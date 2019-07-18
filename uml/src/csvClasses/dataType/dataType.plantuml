@@ -1,0 +1,77 @@
+@startuml
+
+title __DATATYPE's Class Diagram__\n
+
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace dataType {
+          class com.example.progetto.csvClasses.dataType.Metadata {
+              - alias : String
+              - sourceField : String
+              - type : String
+              + Metadata()
+              + getAlias()
+              + getSourceField()
+              + getType()
+              + setAlias()
+              + setSourceField()
+              + setType()
+              + toString()
+          }
+        }
+      }
+    }
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace dataType {
+          class com.example.progetto.csvClasses.dataType.ObjArray {
+              - data : T[]
+              + ObjArray()
+              + getData()
+              + setData()
+              + toString()
+          }
+        }
+      }
+    }
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace dataType {
+          class com.example.progetto.csvClasses.dataType.PrintClass {
+              {static} ~ print()
+              {static} ~ printArrayList()
+              {static} ~ printFormatted()
+              {static} ~ printVector()
+          }
+        }
+      }
+    }
+
+    namespace com.example.progetto {
+      namespace csvClasses {
+        namespace dataType {
+          class com.example.progetto.csvClasses.dataType.UrlWithDescription {
+              - description : String
+              - url : String
+              + UrlWithDescription()
+              + UrlWithDescription()
+              + getDescription()
+              + getUrl()
+              + setDescription()
+              + setUrl()
+              + toString()
+          }
+        }
+      }
+    }
+
+  
+
+
+
+
+
+@enduml
