@@ -1,4 +1,6 @@
 # progetto-programmazione-ad-oggetti
+### Project
+The project is contained in the [progetto-programmazione-ad-oggetti-java](https://github.com/defo-cris/progetto-programmazione-ad-oggetti-java/tree/master) folder
 ### Javadoc
 The javadoc of this project is located in the [javadoc](https://github.com/defo-cris/progetto-programmazione-ad-oggetti/tree/master/javadoc) folder
 
