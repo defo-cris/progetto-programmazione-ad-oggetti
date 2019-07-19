@@ -1,0 +1,17 @@
+# PlantUML Editor
+
+@startuml
+
+left to right direction
+
+actor User
+rectangle Application{
+User --> (1. /data \n get all the dataset)
+User --> (2. /data/{fieldname}?excludeNull={true | false} \n get the data of the column with or without \n the null values)
+User --> (3. /metadata \n get all the metadata)
+User --> (4. /stats/{colName} \n get numeric statistics of the column  )
+User --> (5. /count/{fieldname} \n count the occurence of a param value \n in the fieldname)
+User --> (6. /search?value="value"&exactMatch={false | true} \n get only the row where the value is present in at least \n one of the element of the row)
+User --> (7. /filter \n filter the dataset based on the condition \n passed on the body of  the request)
+  }
+@enduml
