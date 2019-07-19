@@ -1,4 +1,7 @@
 # progetto-programmazione-ad-oggetti
+### Javadoc
+The javadoc of this project is located in the [javadoc](https://github.com/defo-cris/progetto-programmazione-ad-oggetti/tree/master/javadoc) folder
+
 ### UML
 
 Below are the links to the UMLs:
@@ -13,4 +16,4 @@ Below are the links to the UMLs:
 
 [UML Use Case diagram](https://github.com/defo-cris/progetto-programmazione-ad-oggetti/blob/master/uml/user%20case/user%20case.png)
 
-[UML Sequence diagram]()
+[UML Sequence diagram](https://github.com/defo-cris/progetto-programmazione-ad-oggetti/blob/master/uml/sequence%20diagram/sequence%20diagram.png)
